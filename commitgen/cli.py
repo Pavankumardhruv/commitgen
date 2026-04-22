@@ -13,6 +13,18 @@ console = Console()
 
 def main():
     args = sys.argv[1:]
+
+    if "hook" in args:
+        from commitgen.hook import install_hook
+        console.print(install_hook())
+        return
+
+    if "unhook" in args:
+        from commitgen.hook import uninstall_hook
+        console.print(uninstall_hook())
+        return
+
+    commit_msg_only = "--commit-msg-only" in args
     use_local = "--local" in args
     auto_commit = "--commit" in args or "-c" in args
     backend = "ollama" if use_local else "claude"
@@ -36,6 +48,10 @@ def main():
 
     with console.status(f"Generating commit message ({backend})..."):
         message = generate_message(diff, backend=backend)
+
+    if commit_msg_only:
+        print(message)
+        return
 
     panel = Panel(
         Text(message),
