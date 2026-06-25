@@ -14,7 +14,7 @@
 
 ---
 
-commitgen analyzes your staged `git diff` and generates a clear, conventional commit message — then lets you accept, edit, or cancel.
+commitgen analyzes your staged `git diff` and generates a clear, conventional commit message - then lets you accept, edit, or cancel.
 
 Works with **Claude API** (default) for high-quality output, or **Ollama** for fully offline, local generation.
 
@@ -40,9 +40,9 @@ Analyzing 2 staged file(s)...
 ╰─────────────────────────────────────────────────────────╯
 
 Actions:
-  y — commit with this message
-  e — edit in $EDITOR then commit
-  n — cancel
+  y - commit with this message
+  e - edit in $EDITOR then commit
+  n - cancel
 
 → y
 
@@ -100,7 +100,7 @@ commitgen unhook       # Remove it
 
 **What makes the messages good:**
 
-- Imperative mood ("Add", "Fix", "Update" — not "Added", "Fixes")
+- Imperative mood ("Add", "Fix", "Update" - not "Added", "Fixes")
 - Subject line under 72 characters
 - Body explains **why**, not what (the diff already shows what)
 - Skips trivial details (formatting, line numbers)
@@ -135,8 +135,8 @@ commitgen/
 
 ## Why not just write commit messages manually?
 
-You should understand your changes — commitgen doesn't replace that. It replaces the 30 seconds you spend rewording "updated stuff" into something your future self will thank you for. It's a writing assistant, not a thinking replacement.
+You should understand your changes - commitgen doesn't replace that. It replaces the 30 seconds you spend rewording "updated stuff" into something your future self will thank you for. It's a writing assistant, not a thinking replacement.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
