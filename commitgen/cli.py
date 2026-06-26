@@ -66,9 +66,9 @@ def main():
         return
 
     console.print("\n[bold]Actions:[/bold]")
-    console.print("  [green]y[/green] — commit with this message")
-    console.print("  [yellow]e[/yellow] — edit in $EDITOR then commit")
-    console.print("  [red]n[/red] — cancel")
+    console.print("  [green]y[/green] - commit with this message")
+    console.print("  [yellow]e[/yellow] - edit in $EDITOR then commit")
+    console.print("  [red]n[/red] - cancel")
 
     try:
         choice = console.input("\n[bold]→ [/bold]").strip().lower()
@@ -115,7 +115,7 @@ def _edit_and_commit(message: str):
     os.unlink(tmpfile)
 
     if not edited:
-        console.print("[dim]Empty message — cancelled.[/dim]")
+        console.print("[dim]Empty message - cancelled.[/dim]")
         sys.exit(0)
 
     _do_commit(edited)
